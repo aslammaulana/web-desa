@@ -1,0 +1,171 @@
+import { ProfilDesa, Berita, Aparatur, PotensiDesa, PermohonanSurat } from '@/types/database';
+
+export const mockProfilDesa: ProfilDesa = {
+  id: 'mock-desa-1',
+  nama_desa: 'Desa Sukamaju',
+  kecamatan: 'Kecamatan Makmur Jaya',
+  kabupaten: 'Kabupaten Sejahtera',
+  provinsi: 'Jawa Barat',
+  kode_pos: '40123',
+  motto: 'Maju, Mandiri, dan Berbudaya',
+  deskripsi:
+    'Selamat datang di portal resmi Desa Sukamaju. Melalui layanan digital terintegrasi ini, kami berkomitmen menyajikan keterbukaan informasi publik dan mempercepat urusan administrasi warga secara transparan dan akuntabel.',
+  alamat_kantor: 'Jl. Pahlawan Desa No. 45, Desa Sukamaju',
+  telepon: '(022) 8765-4321',
+  email: 'layanan@desasukamaju.id',
+  jam_operasional: 'Senin - Jumat, 08.00 - 15.30 WIB',
+  total_penduduk: 4280,
+  total_kk: 1240,
+  jumlah_dusun: 4,
+  jumlah_rt: 22,
+  jumlah_rw: 7,
+};
+
+export const mockBerita: Berita[] = [
+  {
+    id: 'b-1',
+    judul: 'Penyaluran Bantuan Pangan Cadangan Beras Tahap II',
+    slug: 'penyaluran-bantuan-pangan-cadangan-beras-tahap-ii',
+    ringkasan: 'Pemerintah Desa Sukamaju menyalurkan bantuan beras kepada 350 Keluarga Penerima Manfaat di Balai Desa.',
+    konten:
+      'Pemerintah Desa Sukamaju bekerja sama dengan Perum Bulog dan Kantor Pos telah mendistribusikan Bantuan Pangan Beras Tahap II pada hari Selasa. Sebanyak 350 KPM menerima alokasi masing-masing 10 kg beras berkualitas prima. Kepala Desa berpesan agar bantuan ini meringankan beban kebutuhan pokok sehari-hari warga.',
+    kategori: 'Bantuan',
+    gambar_url: 'https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&q=80&w=800',
+    penulis: 'Sekretariat Desa',
+    is_published: true,
+    created_at: '2026-11-08T09:00:00Z',
+  },
+  {
+    id: 'b-2',
+    judul: 'Jadwal Pelayanan Pembuatan KTP & KK Keliling Bulan Ini',
+    slug: 'jadwal-pelayanan-pembuatan-ktp-kk-keliling',
+    ringkasan: 'Dinas Kependudukan akan hadir langsung di Kantor Desa Sukamaju untuk perekaman KTP-el dan perbaikan KK.',
+    konten:
+      'Dalam rangka mendekatkan layanan kependudukan, mobil keliling Disdukcapil akan beroperasi di pelataran Kantor Desa Sukamaju mulai tanggal 20 hingga 22 bulan ini, pukul 09.00 - 14.00 WIB. Warga diharapkan membawa fotokopi dokumen lama dan surat pengantar dari RT/RW.',
+    kategori: 'Pengumuman',
+    gambar_url: 'https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&q=80&w=800',
+    penulis: 'Kaur Pelayanan',
+    is_published: true,
+    created_at: '2026-11-05T14:30:00Z',
+  },
+  {
+    id: 'b-3',
+    judul: 'Gotong Royong Bersih Saluran Irigasi Sambut Musim Tanam',
+    slug: 'gotong-royong-bersih-saluran-irigasi-sambut-musim-tanam',
+    ringkasan: 'Warga kelompok tani Dusun Sukawangi bahu-membahu membersihkan sedimentasi saluran irigasi primer.',
+    konten:
+      'Menjelang musim tanam padi serentak, ratusan petani dan pemuda Dusun Sukawangi menggelar aksi bersih saluran air sepanjang 2 km. Aksi ini melancarkan debit air ke sawah produktif seluas 85 hektar demi menjaga ketahanan pangan desa.',
+    kategori: 'Kegiatan',
+    gambar_url: 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&q=80&w=800',
+    penulis: 'Admin Desa',
+    is_published: true,
+    created_at: '2026-11-02T08:15:00Z',
+  },
+];
+
+export const mockAparatur: Aparatur[] = [
+  {
+    id: 'a-1',
+    nama: 'H. Ahmad Suryana, S.Sos.',
+    jabatan: 'Kepala Desa',
+    nip: '19750512 200212 1 002',
+    foto_url: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400',
+    urutan: 1,
+    status_aktif: true,
+  },
+  {
+    id: 'a-2',
+    nama: 'Budi Santoso, S.AP.',
+    jabatan: 'Sekretaris Desa',
+    nip: '19820315 200801 1 015',
+    foto_url: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400',
+    urutan: 2,
+    status_aktif: true,
+  },
+  {
+    id: 'a-3',
+    nama: 'Siti Rahmawati, S.E.',
+    jabatan: 'Kepala Urusan Keuangan',
+    nip: '19881120 201202 2 008',
+    foto_url: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400',
+    urutan: 3,
+    status_aktif: true,
+  },
+  {
+    id: 'a-4',
+    nama: 'Dedi Permana',
+    jabatan: 'Kaur Tata Usaha & Umum',
+    nip: '19900405 201503 1 004',
+    foto_url: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400',
+    urutan: 4,
+    status_aktif: true,
+  },
+  {
+    id: 'a-5',
+    nama: 'Rina Marlina, S.IP.',
+    jabatan: 'Kepala Seksi Pelayanan',
+    nip: '19920810 201701 2 006',
+    foto_url: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400',
+    urutan: 5,
+    status_aktif: true,
+  },
+];
+
+export const mockPotensi: PotensiDesa[] = [
+  {
+    id: 'p-1',
+    judul: 'Kerajinan Anyaman Bambu Lestari',
+    kategori: 'UMKM',
+    deskripsi: 'Produk kerajinan tangan ramah lingkungan berkualitas ekspor khas pengrajin Dusun Sukasari.',
+    pemilik_lokasi: 'Kelompok Usaha Bersama Lestari',
+    kontak: '0812-3456-7890',
+    gambar_url: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=600',
+  },
+  {
+    id: 'p-2',
+    judul: 'Agrowisata Petik Jeruk Segar',
+    kategori: 'Wisata',
+    deskripsi: 'Kawasan kebun jeruk organik keluarga dengan pemandangan bukit asri dan udara sejuk pegunungan.',
+    pemilik_lokasi: 'BUMDes Makmur',
+    kontak: '0856-7890-1234',
+    gambar_url: 'https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?auto=format&fit=crop&q=80&w=600',
+  },
+  {
+    id: 'p-3',
+    judul: 'Kopi Robusta Lereng Desa',
+    kategori: 'Pertanian',
+    deskripsi: 'Biji kopi petik merah pilihan warga dengan aroma khas dan cita rasa rempah alami yang kuat.',
+    pemilik_lokasi: 'Koperasi Tani Sejahtera',
+    kontak: '0877-1122-3344',
+    gambar_url: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=600',
+  },
+];
+
+export const mockPermohonanSurat: PermohonanSurat[] = [
+  {
+    id: 's-1',
+    kode_tiket: 'SRT-202611-001',
+    nama_pemohon: 'Agus Hendrawan',
+    nik: '3204123456780001',
+    nomor_hp: '081234567890',
+    alamat: 'RT 02 RW 01 Dusun Krajan',
+    jenis_surat: 'Surat Pengantar SKCK',
+    keperluan: 'Melamar pekerjaan di pabrik tekstil',
+    status: 'Diproses',
+    catatan_petugas: 'Berkas fotokopi KTP dan KK sudah diverifikasi.',
+    created_at: '2026-11-10T10:20:00Z',
+  },
+  {
+    id: 's-2',
+    kode_tiket: 'SRT-202611-002',
+    nama_pemohon: 'Dewi Sartika',
+    nik: '3204123456780002',
+    nomor_hp: '089876543210',
+    alamat: 'RT 04 RW 02 Dusun Sukamulya',
+    jenis_surat: 'Surat Keterangan Usaha (SKU)',
+    keperluan: 'Persyaratan pengajuan modal usaha KUR',
+    status: 'Selesai',
+    catatan_petugas: 'Surat sudah ditandatangani Kepala Desa dan siap diambil di loket.',
+    created_at: '2026-11-09T08:45:00Z',
+  },
+];
